@@ -1,8 +1,15 @@
 import React from 'react'
 
-function MovieList() {
+function MovieList (props) {
   return (
-    <div></div>
+    <>
+        {props.films.map((film, index) => (
+            <div key={film.imdbID}>
+                <img src={film.Poster} alt="movie poster"/>
+                <p>{film.Title}</p>
+            </div>
+        ))}
+    </>
   )
 }
 
