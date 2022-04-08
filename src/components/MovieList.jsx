@@ -1,13 +1,14 @@
 import React from 'react'
+import {Card} from 'react-bootstrap'
 
 function MovieList (props) {
   return (
     <>
         {props.films.map((film, index) => (
-            <div key={film.imdbID}>
+            <Card style={{ width: '20rem' }} key={film.imdbID}>
                 <img src={film.Poster} alt="movie poster"/>
                 <p>{film.Title}</p>
-            </div>
+            </Card>
         ))}
     </>
   )
